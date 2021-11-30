@@ -18,19 +18,19 @@ function helloName( name ) {
   return `Hello ${name}`;
 }
 // Remember to call the function to test
-console.log('Hello name test:', helloName('Nick'));
+console.log('Hello name test - should return \'Hello Nick\':', helloName('Nick'));
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
   return firstNumber + secondNumber;
 }
-console.log('Add numbers test: ', addNumbers(5, 8));
+console.log('Add numbers test - should retrun 13:', addNumbers(5, 8));
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree( firstNumber, secondNumber, thirdNumber ){
   return firstNumber * secondNumber * thirdNumber;
 }
-console.log('Multiply three test:', multiplyThree(2, 3, 4));
+console.log('Multiply three test - should return 24:', multiplyThree(2, 3, 4));
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
@@ -58,7 +58,8 @@ function getLast( array ) {
     return undefined;
   }
 }
-console.log('getLast test:', getLast([1, 2, 3]));
+console.log('getLast test - should return 3:', getLast([1, 2, 3]));
+console.log('getLast test - should return undefined:', getLast([]));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
@@ -80,7 +81,7 @@ console.log('find test - return false', find(2, [5, 3, 8, 8]))
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-  return string.match(letter);
+  return letter === string.charAt(0) ? true : false;
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
@@ -102,7 +103,7 @@ console.log('positiveArray test - should be [2, 4, 6]', positiveArray([-1, 2, 4,
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
-
+// ----------------------
 // https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9
 // Simple, given a string of words, return the length of the shortest word(s).
 // String will never be empty and you do not need to account for different data types.
@@ -115,3 +116,4 @@ function findShort(s){
   });
   return short;
 }
+console.log('code wars test - should return 3', findShort("The quick brown fox jumped over the lazy dog"));
